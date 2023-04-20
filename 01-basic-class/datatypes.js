@@ -11,9 +11,9 @@ console.log(typeof(floatNmu),"======",floatNmu);
 
 //String
 
-var str = "Kotireddy";
+var str = "Kotireddy"; // double quotate 
 
-var strSingleQut = 'Kamireddy';
+var strSingleQut = 'Kamireddy'; // single quotate 
 console.log(typeof(str),"===",str,typeof(strSingleQut),"========",strSingleQut);
 
 //Boolean
