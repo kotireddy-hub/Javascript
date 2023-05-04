@@ -74,4 +74,4 @@ console.log(aaaa,"Global Level Scope");
     const x1 = 2;
     console.log(x1);
   }
-  console.log(x1);
+  //console.log(x1);
