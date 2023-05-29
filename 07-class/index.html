@@ -1,15 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function handleToUserDetails() {
+            console.log("handleToUserDetails");
+
+            var fName = document.getElementById("firstName").value;
+            console.log(fName, ":: fName::");
+            var lName = document.getElementById("lastName").value;
+            console.log(lName, ":: lName::");
+            var fullName = document.getElementById("fullName").value;
+            console.log(fullName, ":: fullName::");
+
+            const userDetails = {
+                "fname": `${fName}`,
+                "lName": `${lName}`,
+                "fullName": `${fullName}`
+            };
+
+            console.log(userDetails, ":: userDeatils:: ");
+
+        }
+
+        function handleToTable(){
+
+            console.log("handleToTable");
+            const tableNumber = document.getElementById("tableNumber").value;
+
+            console.log("*****************************************");
+            
+            console.log(`${tableNumber} X 1 = ${tableNumber*1}`);
+            console.log(`${tableNumber} X 2 = ${tableNumber*2}`);
+            console.log(`${tableNumber} X 3 = ${tableNumber*3}`);
+            console.log(`${tableNumber} X 4 = ${tableNumber*4}`);
+            console.log(`${tableNumber} X 5 = ${tableNumber*5}`);
+            console.log(`${tableNumber} X 6 = ${tableNumber*6}`);
+            console.log(`${tableNumber} X 7 = ${tableNumber*7}`);
+            console.log(`${tableNumber} X 8 = ${tableNumber*8}`);
+            console.log(`${tableNumber} X 9 = ${tableNumber*9}`);
+            console.log(`${tableNumber} X 10 = ${tableNumber*10}`);
+
+            console.log("*****************************************");
+        }
+    </script>
 </head>
+
 <body>
-    FirstName: <input type="text" id="firstName"/>
-    LastName: <input type="text" />
-    FullName: <input type="text" />
-    <button type="button">Submit</button>
+    FirstName: <input type="text" id="firstName" />
+    LastName: <input type="text" id="lastName" />
+    FullName: <input type="text" class="fullName" id="fullName" />
+    <button type="button" onclick="handleToUserDetails()">Submit</button>
+    <br />
+    <br />
+    <br />
+    <div>
+        Table: <input type="number" id="tableNumber" />
+        <button type="button" onclick="handleToTable()">Create Table</button>
+    </div>
 </body>
+
 </html>
