@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="menu">
+        <li class="item" name="html">HTML</li>
+        <li class="item">CSS</li>
+        <li class="item">Javascript</li>
+        <li class="item">React JS</li>
+    </ul>
+    <input type="radio" name="lang" value="javascript" /> Javascript
+    <input type="radio" name="lang" value="typescript" /> Typescript
+</body>
+
+</html>
+<script>
+    const menu = document.getElementById("menu");
+    const item = menu.getElementsByClassName("item");
+    const firstItem = item[0].textContent;
+    console.log(firstItem, ":::  firstItem");
+    const secondItem = item[1].textContent;
+    console.log(secondItem, ":::  secondItem");
+    const thridItem = item[2].textContent;
+    console.log(thridItem, ":::  thridItem");
+    const fourthItem = item[3].textContent;
+    console.log(fourthItem, ":::  fourthItem");
+    const newArray = [firstItem, secondItem, thridItem, fourthItem];
+    console.log(newArray, "::: newArrary");
+    const lang = document.getElementsByName("lang")[1].value;
+    console.log(lang, "::   -=====")
+</script>
