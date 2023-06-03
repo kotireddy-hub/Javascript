@@ -60,6 +60,49 @@ console.log(canIVote);
 
 
 
+const company1 = "rubies"; // 2
+
+const company2 ="swoop"; // 3
+
+const exp = (company1 === "rubies" && company2 === "swoop") ? "I am worked" : "I am not worked";
+
+/* switch  statment
+ switch(expression){
+    case expression
+    code here
+    break;
+    case expression
+    codehere
+    break
+    defult 
+    code here
+
+ }
+
+ */
+
+switch (RED_LIGHT) {
+    case "green":
+        console.log("We are in green light");
+        break;
+    case "red":
+        console.log("We are in red light");
+        break;
+    case "yellow":
+        console.log("We are in yellow light");
+        break;
+    default:
+        console.log("no light match");
+}
+
+
+
+
+
+
+
+
+
 
 
 
