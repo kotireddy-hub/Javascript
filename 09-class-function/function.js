@@ -66,3 +66,14 @@ function userDeatils(fName,lName,age1,location1){
 userDeatils("Anil","kothpalli",22,"HYD");
 userDeatils(firstName,lastName,age,location);
 userDeatils("Boya","Reddy",29,"HYD");
+
+/* 
+1.function invoke
+2.function declartion
+3.function declration - input 
+4.function expression 
+5. fuction expression - input
+6.no of way creating fuction
+7.arrow fuctipn - es6 main important
+8.default parameters
+*/

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function handleToName(){
+            console.log("Welcom");
+            const name = document.getElementById("name").value;
+            if(!name){
+                alert("Please enter the User Name")
+            }else{
+                console.log(`Welcome to the javascript class ${name}`);
+            }
+        }
+        function handleMatchOperation(){
+            const firstValue = document.getElementById("firstArg").value;
+            const secondValue = document.getElementById("secondArg").value;
+            if(!firstValue || !secondValue){
+                alert("Please enter the first Value and second value")
+            }else{
+              const add = Number(firstValue) + Number(secondValue);
+              console.log(add);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="name"/>
+    <button onclick="handleToName()">Submit</button>
+    <input type="number" id="firstArg" />
+    <input type="number" id="secondArg" />
+    <button onclick="handleMatchOperation()">Submit</button>
+</body>
+</html>
