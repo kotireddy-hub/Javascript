@@ -60,3 +60,49 @@ const newArraySort = [39,40,50,69,66];
 newArraySort.sort(function(a,b){ // newArraySort[0] // 39 newArraySort[1]
  return a - b; // post -1 false || pos true // sort //post //[39,40,50,66,69]
 })
+
+console.log(newArraySort.sort());
+
+
+// split method
+const frndListstringData = "seshi,nari,anil";
+const splitArray = frndListstringData.split(",");
+console.log(splitArray);
+
+// join
+const frndListArrayData = ["seshi","Divya_kaniaha","anil","nari"];
+const splitString = frndListArrayData.join(",");
+console.log(splitString);
+
+// "include" is used to find value is there not 
+
+console.log(frndListArrayData.includes("Divya_"));
+
+// find is method it will return value
+const listNumber = [35,56,66,76,100];
+function findAge(num){
+return num == 56
+}
+
+console.log(listNumber.find(findAge));
+
+const findNum = listNumber.find((num)=>{ return num >= 100});
+// [343===] => 34 => 34 >=100 F
+//[] => 56 => 56 >=100 F
+
+
+console.log(findNum);
+
+//findindex this method will return index of the value
+
+const findindex = listNumber.findIndex(findAge);
+console.log(findindex) // -1
+
+//every is checking all the element and all should be equal and it true / faslse
+const everyEle = listNumber.every(findAge);
+console.log(everyEle);
+
+// some is checng all the element if it match one critearia and it will true
+const someMethod = listNumber.some(findAge);
+console.log(someMethod);
+
