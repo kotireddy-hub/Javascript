@@ -79,3 +79,44 @@ console.log(resultArr)
 //findIndex() - retrun an index of value
 const findIndex = findArr.findIndex( (val) => val === 5 );
 console.log(findIndex)
+
+
+// every
+
+const arr = [2,4,6,7]
+
+//2 % 2 === 1 - false
+const isEven = arr.every( (val) => val % 2 === 0);
+console.log(isEven)
+
+//some 
+
+const isEvenNumber = arr.some( (val) => val % 2 === 0);
+
+console.log(isEvenNumber)
+
+//map - create a new array with result of calling provided the function 
+
+const sum = arr.map( (num) => num + 2 );
+
+console.log(sum, arr)
+
+//filter - create a new array 
+
+const isEvenNum = arr.filter( (val) => val % 2 === 0 );
+console.log(isEvenNum)
+
+//reduce
+
+const sumArr = arr.reduce( (acc, curr) => { // 0 , 2  // 2 , 4
+  return acc + curr   // 0 + 2 // 2  // 2 + 4 // 6
+});
+
+console.log(sumArr)
+
+
+
+//toString();
+
+const convertString = arr.toString();
+console.log(convertString, typeof(convertString));
