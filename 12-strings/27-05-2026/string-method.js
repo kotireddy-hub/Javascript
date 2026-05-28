@@ -35,3 +35,33 @@ console.log( 'hello'.padEnd(10, 'h'));
 console.log('hello'.charAt(1));
 
 console.log('hello'.charCodeAt(1))
+
+
+
+console.log('Hello'.charCodeAt(0));
+
+console.log('hello world'.split(' ')); // retrn arry 
+
+console.log("Hello World @ Hi".split('@'));
+
+console.log('Hello,Hi,Welcome'.split(','));
+//indexof
+console.log( 'Hello world'.indexOf('w'))
+
+
+//lastIndexOf
+console.log("Hello world".lastIndexOf('o'))
+
+//include 
+console.log("Hello world".includes('gdgdg'))
+
+//startsWith
+console.log("Hello SSS".startsWith("Hello"))
+console.log("Hello SSS".startsWith("SSS"))
+
+//endsWith
+console.log("Hello world".endsWith('world'))
+
+console.log("Hello world".endsWith('d'))
+
+console.log("Hello world".endsWith('Hello'))
