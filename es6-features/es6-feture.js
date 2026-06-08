@@ -95,3 +95,116 @@ console.log(userVal1, userVal2, "==== before swapping");
 [userVal1, userVal2] = [userVal2, userVal1];
 
 console.log(userVal1, userVal2, "=== after swapping");
+
+//object
+const vehicle = {
+    brand: 'TATA',
+    modal: 'Nexon',
+    type: 'car',
+    typeOfVehicle:'two wheelr',
+    color: "red",
+    details:{
+        date: 8,
+        month: 5,
+        year: 2026
+    }
+}
+
+//function car( { typeOfVehicle, color}){
+function car(values){
+   //console.log(values, " ==== values");
+   
+   const {typeOfVehicle, color, isEngine = "Good" } = values;
+   
+   console.log(typeOfVehicle, "=== typeOfVehicle")
+   console.log(color, "=== color")
+   console.log(isEngine, "=== isEngine")
+};
+
+
+car(vehicle);
+
+
+function keyExtraction(key){
+    const { [key] : returnValue } = vehicle;
+    return returnValue;
+};
+
+const carBrand1 = keyExtraction('brand')
+const modal1 = keyExtraction('modal')
+console.log("=====================================")
+console.log(carBrand1, "carBrand1 ")
+console.log(modal1, "modal1 ")
+
+
+const { brand, modal, ...rest } = vehicle;
+
+const { details:{ date} } = rest;
+
+const { brand: carBrand } = vehicle
+
+console.log("=====================================")
+
+console.log(brand, "=== brand")
+console.log(modal, "=== modal")
+console.log("=====================================")
+console.log(rest, '==== rest operator')
+console.log("=====================================")
+console.log(date)
+console.log("=====================================")
+console.log(carBrand, '==== carBrand')
+console.log("=====================================")
+
+
+//spread operator  -  to combine two object / array (...)
+//object
+const obj1 = {
+    a:'a1',
+    b: 'b1'
+}
+
+const obj2 ={
+    c:'c1',
+    d: 'd1'
+}
+
+const obj3 = {...obj1, ...obj2};
+console.log(obj3)
+
+// array
+
+const arr1 = [1,2,3,4,5];
+const arr2 = [6,7,8,9];
+const arr3 = [...arr1, ...arr2];
+const arr4 = [...arr1, arr2];
+
+console.log(arr3);
+console.log(arr4);
+
+
+//Promise 
+// three state 
+//1. fulfilled - operation is completed 
+//2. pending  - operation is not completed 
+//3. rejected - an error occurs
+
+/*let promise = new Promise( functin(resolve, reject){
+    // do operation
+})*/
+
+const count = false;
+
+let countValue = new Promise( (res, rej) => {
+    if(count){
+        res("yes count is there")
+    }else{
+        rej('no count is not there')
+    }
+}) 
+
+countValue.then( function(result){
+    console.log(result,"===")
+})
+.catch( function(result){
+  console.log(result)  
+});
