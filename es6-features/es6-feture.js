@@ -208,3 +208,112 @@ countValue.then( function(result){
 .catch( function(result){
   console.log(result)  
 });
+
+
+//finally - resolve or rejected
+
+// let countValue = new Promise( function (resolve, reject) {
+//     reject('Promise rejected')
+// })
+
+// countValue.finally( () => {
+//     console.log(" this is code executed")
+// })
+
+const userData = {
+    isActive: true,
+    name:"Hello",
+    age: 30
+}
+
+let userDetails = new Promise ( (res, rej) => {
+    if(!userData.isActive){
+        res(userData)
+    }else{
+        rej('user data is not isActive')
+    }
+})
+
+userDetails.then( (result) => {
+     console.log(result, "==== result then block")
+})
+.catch( (result) => {
+     console.log(result, "==== result catch block")
+})
+.finally( () => {
+     console.log("====  finally block")
+})
+
+
+// four api- 
+//1. api suu -> api -> api -> 
+
+/*api(function(result){
+    api1(function(result){
+        api2( function(result){
+            if(err){
+                // do
+            }else{
+                //print response
+            }
+        })
+    })
+})*/
+
+// api().then( () =>{
+//     return api1();
+// }).then( () => {
+//     return api2();
+// }).catch( (error) =>{
+//     //
+// })
+// promise.all();
+// promise.allSettled()
+//promise.race()
+//promise.any()
+//promise.resolve()
+//promise.reject()
+//promise.catch()
+//promis.finally()
+//promise.then()
+
+// - all promise are success - then it suucess - 
+// - any promise failed - then it will first reject resaon
+//promise.all( [promie1,promise2])
+console.log("===========================================")
+let api1 = new Promise( (res,rej) => {
+    setTimeout( () => res("Resolved API1"),1000)
+});
+console.log("===========================================")
+let api2 = new Promise( (res,rej) => {
+    setTimeout( () => rej(new Error("Api2 is an error")),2000)
+});
+console.log("===========================================")
+let api3 = new Promise( (res,rej) => {
+    setTimeout( () => res("Resolved API3"),500)
+});
+
+Promise.all( [api1,api2,api3]).then( (value) => {
+    console.log(value)
+}).catch( (error) => {
+    console.log(error.message)
+});
+Promise.allSettled( [api1,api2,api3]).then( (value) => {
+    console.log(value)
+}).catch( (error) => {
+    console.log(error.message)
+});
+
+Promise.race( [api1,api2,api3]).then( (value) => {
+    console.log(value)
+}).catch( (error) => {
+    console.log(error.message)
+});
+
+Promise.any( [api1,api2,api3]).then( (value) => {
+    console.log(value)
+}).catch( (error) => {
+    console.log(error.message)
+});
+
+
